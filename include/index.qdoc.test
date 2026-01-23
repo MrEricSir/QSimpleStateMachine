@@ -1,0 +1,12 @@
+/*!
+    \page index.html
+    \title QSimpleStateMachine Overview
+
+    This class provides a stupidly simple state machine with few dependencies.
+
+    \section1 Classes
+    \list
+        \li \l {QSimpleStateMachine}
+    \endlist
+*/
+
