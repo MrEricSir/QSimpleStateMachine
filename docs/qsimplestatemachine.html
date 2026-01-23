@@ -39,10 +39,25 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>This library consists of a header only.</p>
-<p>// Set up your states as enums, like this: enum MyStates { START, STATE_A, STATE_B, COMPLETE };</p>
-<p>// Transitions are handled via callbacks. QSimpleStateMachine machine; machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_A, [this]() { startToStateA(); }); machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_B, [this]() { startToStateB(); }); machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(STATE_A, STATE_B, [this]() { stateAToStateB(); }); // ... etc.</p>
-<p>// To switch from any state to a specific state, use -1 machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(-1, COMPLETE, [this]() { onComplete(); });</p>
-<p>// Set the start state, then call <a href="qsimplestatemachine.html#setState" translate="no">setState</a>() as needed. machine.start(START); // ... machine.<a href="qsimplestatemachine.html#setState" translate="no">setState</a>(STATE_B);</p>
+<p>// Set up your states as enums, like this:</p>
+<p>enum MyStates {</p>
+<p>START,</p>
+<p>STATE_A,</p>
+<p>STATE_B,</p>
+<p>COMPLETE</p>
+<p>};</p>
+<p>// Transitions are handled via callbacks.</p>
+<p>QSimpleStateMachine machine;</p>
+<p>machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_A, [this]() { startToStateA(); });</p>
+<p>machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_B, [this]() { startToStateB(); });</p>
+<p>machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(STATE_A, STATE_B, [this]() { stateAToStateB(); });</p>
+<p>// ... etc.</p>
+<p>// To switch from any state to a specific state, use -1</p>
+<p>machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(-1, COMPLETE, [this]() { onComplete(); });</p>
+<p>// Set the start state, then call <a href="qsimplestatemachine.html#setState" translate="no">setState</a>() as needed.</p>
+<p>machine.start(START);</p>
+<p>// ...</p>
+<p>machine.<a href="qsimplestatemachine.html#setState" translate="no">setState</a>(STATE_B);</p>
 <p>That's it!</p>
 </div>
 <!-- @@@QSimpleStateMachine -->
