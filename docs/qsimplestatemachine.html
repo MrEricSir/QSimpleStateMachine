@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
 <!-- QSimpleStateMachine.h -->
-  <meta name="description" content="This class provides a stupidly simple state machine with few dependencies.">
+  <meta name="description" content="This class provides a stupidly simple state machine for Qt applications with few dependencies. Cross-platform for Windows, macOS, and Linux.">
   <title>QSimpleStateMachine Class | QSimpleStateMachine 1.0.0</title>
      <link rel="stylesheet" type="text/css" href="style/offline.css" /> </head>
 <body>
+<li><a href="qsimplestatemachine-module.html" translate="no">QSimpleStateMachine</a></li>
 <li>QSimpleStateMachine</li>
 <div class="sidebar">
 <div class="toc">
@@ -18,7 +19,7 @@
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title" translate="no">QSimpleStateMachine Class</h1>
 <!-- $$$QSimpleStateMachine-brief -->
-<p>This class provides a stupidly simple state machine with few dependencies. <a href="#details">More...</a></p>
+<p>This class provides a stupidly simple state machine for Qt applications with few dependencies. Cross-platform for Windows, macOS, and Linux. <a href="#details">More...</a></p>
 <!-- @@@QSimpleStateMachine -->
 <div class="table"><table class="alignedsummary requisites" translate="no">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <code translate="no">#include &lt;QSimpleStateMachine&gt;</code></td></tr>
@@ -26,6 +27,7 @@
 <!-- $$$QSimpleStateMachine-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
+<p>This library consists of a header only.</p>
 <p>// Set up your states as enums, like this: enum MyStates { START, STATE_A, STATE_B, COMPLETE };</p>
 <p>// Transitions are handled via callbacks. QSimpleStateMachine machine; machine.addStateChange(START, STATE_A, [this]() { startToStateA(); }); machine.addStateChange(START, STATE_B, [this]() { startToStateB(); }); machine.addStateChange(STATE_A, STATE_B, [this]() { stateAToStateB(); }); // ... etc.</p>
 <p>// To switch from any state to a specific state, use -1 machine.addStateChange(-1, COMPLETE, [this]() { onComplete(); });</p>
