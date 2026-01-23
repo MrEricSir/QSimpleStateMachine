@@ -82,9 +82,9 @@ class QSimpleStateMachine : public QObject
     
 public:
     /*!
-        \fn explicit inline QSimpleStateMachine(QObject *parent = nullptr)
+        \fn explicit inline QSimpleStateMachine::QSimpleStateMachine(QObject *parent = nullptr)
 
-        Constructs a QSimpleStateMachine object.
+        Constructs a QSimpleStateMachine object. Optionally, the \a parent is the owner of the object.
      */
     explicit inline QSimpleStateMachine(QObject *parent = nullptr) :
         QObject(parent),
@@ -95,7 +95,7 @@ public:
     /*!
         \fn inline void start(int initialState)
 
-        Starts the state machine with the provided initial state; does not trigger any callbacks.
+        Starts the state machine with the provided \a initialState. Does not trigger any callbacks.
      */
     inline void start(int initialState)
     {
@@ -103,9 +103,9 @@ public:
     }
 
     /*!
-        \fn inline void setState(int state)
+        \fn inline void QSimpleStateMachine::setState(int state)
 
-        Causes a state change, assuming state != getState().  If there is no path
+        Causes a state change, assuming \a state != getState().  If there is no path
         from the previous state to this state, a critical error will be logged.
      */
     inline void setState(int state)
@@ -145,17 +145,17 @@ public:
     }
     
     /*!
-        \fn inline int getState()
+        \fn inline int QSimpleStateMachine::getState()
 
-        Returns the current state.
+        Returns the \c current state.
      */
     inline int getState() { return currentState; }
 
     /*!
-        \fn inline void addStateChange(int from, int to, std::function<void()> callback)
+        \fn inline void QSimpleStateMachine::addStateChange(int from, int to, std::function<void()> callback)
 
-        Sets a callback to be executed when the state changes from one state to
-        another. The callback can be any std::function that matches the parameter type.
+        Sets a callback to be executed when the state changes \a from one state \a to
+        another. The \a callback can be any std::function that matches the parameter type.
      */
     inline void addStateChange(int from, int to, std::function<void()> callback)
     {
@@ -164,9 +164,9 @@ public:
 
 signals:
     /**
-        \fn void stateChanged(int from, int to)
+        \fn void QSimpleStateMachine::stateChanged(int from, int to)
 
-        Signals a state change from one state to another.
+        Signals a state change \a from one state \a to another. Useful for debug logging.
      */
     void stateChanged(int from, int to);
 
