@@ -51,6 +51,8 @@ machine.setState(STATE_B);
 You can also listen to the `stateChanged()` signal to be notified of state changes that way
 which is often useful for logging and debugginges.
 
+Code docuemntation [is available here.](https://mrericsir.github.io/QSimpleStateMachine/docs/qsimplestatemachine.html)
+
 ## How To Include
 
 There are two option to include this in your project:
