@@ -1,4 +1,4 @@
-![Morpheus in The Matrix saying "He is the one"](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemRuZnV1eXMwZm54bXg4aXNuajR3cXQ1NTFrMzlibHNlOWp5NHJnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aqLEgEvlGAFZ6zS4E5/giphy.gif)
+![Clip from video for Kraftwerk's "The Man Machine"](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamx5YTAyNXd6Z3M0NnJ2djhpNjBsbXY5cmF2MmtkaXZzbW16d2dtZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xLg9bOhJK2Z2w/giphy.gif)
 
 # QSimpleStateMachine
 
