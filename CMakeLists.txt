@@ -65,12 +65,14 @@ if(ENABLE_COVERAGE)
         target_compile_options(QSimpleStateMachine INTERFACE --coverage -O0 -g)
         target_link_options(QSimpleStateMachine INTERFACE --coverage)
 
-        # Add custom target for coverage report generation
-        find_program(LCOV_PATH lcov)
-        find_program(GENHTML_PATH genhtml)
+        # Only create coverage targets when building standalone (not as a submodule)
+        if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+            # Add custom target for coverage report generation
+            find_program(LCOV_PATH lcov)
+            find_program(GENHTML_PATH genhtml)
 
-        if(LCOV_PATH AND GENHTML_PATH)
-            add_custom_target(coverage
+            if(LCOV_PATH AND GENHTML_PATH)
+                add_custom_target(coverage
                 # Reset coverage counters
                 COMMAND ${LCOV_PATH} --directory . --zerocounters
 
@@ -123,11 +125,12 @@ if(ENABLE_COVERAGE)
                 COMMENT "Generating HTML coverage report and opening in browser"
             )
 
-            message(STATUS "Coverage target 'coverage' available - run: make coverage (runs tests + generates HTML)")
-            message(STATUS "Coverage target 'coverage-html' available - run: make coverage-html (generates HTML from existing test data)")
-        else()
-            message(WARNING "lcov or genhtml not found - coverage target not available")
-        endif()
+                message(STATUS "Coverage target 'coverage' available - run: make coverage (runs tests + generates HTML)")
+                message(STATUS "Coverage target 'coverage-html' available - run: make coverage-html (generates HTML from existing test data)")
+            else()
+                message(WARNING "lcov or genhtml not found - coverage target not available")
+            endif()
+        endif() # CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME
     else()
         message(WARNING "Coverage only supported with GCC or Clang")
     endif()
