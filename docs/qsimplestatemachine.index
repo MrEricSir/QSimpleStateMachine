@@ -2,7 +2,20 @@
 <!DOCTYPE QDOCINDEX>
 <INDEX url="" title="QSimpleStateMachine Reference Documentation" version="1.0.0" project="QSimpleStateMachine">
     <namespace name="" status="active" access="public" module="qsimplestatemachine">
-        <class name="QSimpleStateMachine" href="qsimplestatemachine.html" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="79" documented="true" module="QSimpleStateMachine" brief="This class provides a stupidly simple state machine for Qt applications with few dependencies. Cross-platform for Windows, macOS, and Linux"/>
+        <class name="QSimpleStateMachine" href="qsimplestatemachine.html" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="79" documented="true" module="QSimpleStateMachine" brief="This class provides a stupidly simple state machine for Qt applications with few dependencies. Cross-platform for Windows, macOS, and Linux">
+            <function name="QSimpleStateMachine" fullname="QSimpleStateMachine::QSimpleStateMachine" href="qsimplestatemachine.html#QSimpleStateMachine" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="89" documented="true" meta="constructor" explicit="true" signature="QSimpleStateMachine(int *parent)">
+                <parameter type="int *" name="parent" default="nullptr"/>
+            </function>
+            <function name="addStateChange" fullname="QSimpleStateMachine::addStateChange" href="qsimplestatemachine.html#addStateChange" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="160" documented="true" meta="plain" type="void" signature="void addStateChange(int from, int to, std::function&lt;void ()&gt; callback)">
+                <parameter type="int" name="from" default=""/>
+                <parameter type="int" name="to" default=""/>
+                <parameter type="std::function&lt;void ()&gt;" name="callback" default=""/>
+            </function>
+            <function name="getState" fullname="QSimpleStateMachine::getState" href="qsimplestatemachine.html#getState" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="152" documented="true" meta="plain" type="int" signature="int getState()"/>
+            <function name="setState" fullname="QSimpleStateMachine::setState" href="qsimplestatemachine.html#setState" status="active" access="public" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="111" documented="true" meta="plain" type="void" signature="void setState(int state)">
+                <parameter type="int" name="state" default=""/>
+            </function>
+        </class>
         <module name="QSimpleStateMachine" href="qsimplestatemachine-module.html" status="active" location="QSimpleStateMachine.h" filepath="/home/runner/work/QSimpleStateMachine/QSimpleStateMachine/include/QSimpleStateMachine/QSimpleStateMachine.h" lineno="38" documented="true" seen="true" title="QSimpleStateMachine C++ Classes" brief="Header-only library for a stupidly simple state machine"/>
     </namespace>
 </INDEX>

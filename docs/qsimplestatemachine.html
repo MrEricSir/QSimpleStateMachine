@@ -13,6 +13,7 @@
 <div class="toc">
 <h3 id="toc">Contents</h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -24,16 +25,45 @@
 <div class="table"><table class="alignedsummary requisites" translate="no">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> <code translate="no">#include &lt;QSimpleStateMachine&gt;</code></td></tr>
 </table></div>
+<ul>
+<li><a href="qsimplestatemachine-members.html">List of all members, including inherited members</a></li>
+</ul>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary" translate="no">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsimplestatemachine.html#QSimpleStateMachine" translate="no">QSimpleStateMachine</a></b>(int *<i>parent</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a></b>(int <i>from</i>, int <i>to</i>, std::function&lt;void ()&gt; <i>callback</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsimplestatemachine.html#getState" translate="no">getState</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsimplestatemachine.html#setState" translate="no">setState</a></b>(int <i>state</i>)</td></tr>
+</table></div>
 <!-- $$$QSimpleStateMachine-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>This library consists of a header only.</p>
 <p>// Set up your states as enums, like this: enum MyStates { START, STATE_A, STATE_B, COMPLETE };</p>
-<p>// Transitions are handled via callbacks. QSimpleStateMachine machine; machine.addStateChange(START, STATE_A, [this]() { startToStateA(); }); machine.addStateChange(START, STATE_B, [this]() { startToStateB(); }); machine.addStateChange(STATE_A, STATE_B, [this]() { stateAToStateB(); }); // ... etc.</p>
-<p>// To switch from any state to a specific state, use -1 machine.addStateChange(-1, COMPLETE, [this]() { onComplete(); });</p>
-<p>// Set the start state, then call setState() as needed. machine.start(START); // ... machine.setState(STATE_B);</p>
+<p>// Transitions are handled via callbacks. QSimpleStateMachine machine; machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_A, [this]() { startToStateA(); }); machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(START, STATE_B, [this]() { startToStateB(); }); machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(STATE_A, STATE_B, [this]() { stateAToStateB(); }); // ... etc.</p>
+<p>// To switch from any state to a specific state, use -1 machine.<a href="qsimplestatemachine.html#addStateChange" translate="no">addStateChange</a>(-1, COMPLETE, [this]() { onComplete(); });</p>
+<p>// Set the start state, then call <a href="qsimplestatemachine.html#setState" translate="no">setState</a>() as needed. machine.start(START); // ... machine.<a href="qsimplestatemachine.html#setState" translate="no">setState</a>(STATE_B);</p>
 <p>That's it!</p>
 </div>
 <!-- @@@QSimpleStateMachine -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QSimpleStateMachine[overload1]$$$QSimpleStateMachineint* -->
+<h3 class="fn" translate="no" id="QSimpleStateMachine"><code class="details extra" translate="no">[explicit]</code> QSimpleStateMachine::<span class="name">QSimpleStateMachine</span>(<span class="type">int</span> *<i>parent</i> = nullptr)</h3>
+<p>Constructs a QSimpleStateMachine object. Optionally, the <i translate="no">parent</i> is the owner of the object.</p>
+<!-- @@@QSimpleStateMachine -->
+<!-- $$$addStateChange[overload1]$$$addStateChangeintintstd::function<void()> -->
+<h3 class="fn" translate="no" id="addStateChange"><span class="type">void</span> QSimpleStateMachine::<span class="name">addStateChange</span>(<span class="type">int</span> <i>from</i>, <span class="type">int</span> <i>to</i>, <span class="type">std::function</span>&lt;<span class="type">void</span> ()&gt; <i>callback</i>)</h3>
+<p>Sets a callback to be executed when the state changes <i translate="no">from</i> one state <i translate="no">to</i> another. The <i translate="no">callback</i> can be any std::function that matches the parameter type.</p>
+<!-- @@@addStateChange -->
+<!-- $$$getState[overload1]$$$getState -->
+<h3 class="fn" translate="no" id="getState"><span class="type">int</span> QSimpleStateMachine::<span class="name">getState</span>()</h3>
+<p>Returns the <code translate="no">current</code> state.</p>
+<!-- @@@getState -->
+<!-- $$$setState[overload1]$$$setStateint -->
+<h3 class="fn" translate="no" id="setState"><span class="type">void</span> QSimpleStateMachine::<span class="name">setState</span>(<span class="type">int</span> <i>state</i>)</h3>
+<p>Causes a state change, assuming <i translate="no">state</i> != <a href="qsimplestatemachine.html#getState" translate="no">getState</a>(). If there is no path from the previous state to this state, a critical error will be logged.</p>
+<!-- @@@setState -->
+</div>
 </body>
 </html>
