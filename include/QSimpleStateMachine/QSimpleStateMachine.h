@@ -51,26 +51,41 @@
     This library consists of a header only.
 
     // Set up your states as enums, like this:
+
     enum MyStates {
+
       START,
+
       STATE_A,
+
       STATE_B,
+
       COMPLETE
+
     };
 
     // Transitions are handled via callbacks.
+
     QSimpleStateMachine machine;
+
     machine.addStateChange(START, STATE_A, [this]() { startToStateA(); });
+
     machine.addStateChange(START, STATE_B, [this]() { startToStateB(); });
+
     machine.addStateChange(STATE_A, STATE_B, [this]() { stateAToStateB(); });
+
     // ... etc.
 
     // To switch from any state to a specific state, use -1
+
     machine.addStateChange(-1, COMPLETE, [this]() { onComplete(); });
 
     // Set the start state, then call setState() as needed.
+
     machine.start(START);
+
     // ...
+
     machine.setState(STATE_B);
 
 
